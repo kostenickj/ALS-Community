@@ -72,11 +72,11 @@ public:
 
 	/** Enable Movement Animations if IsMoving and HasMovementInput, or if the Speed is greater than 150. */
 	UFUNCTION(BlueprintCallable, Category = "ALS|Grounded")
-	bool ShouldMoveCheck() const;
+	virtual bool ShouldMoveCheck() const;
 
 	/** Only perform a Rotate In Place Check if the character is Aiming or in First Person. */
 	UFUNCTION(BlueprintCallable, Category = "ALS|Grounded")
-	bool CanRotateInPlace() const;
+	virtual bool CanRotateInPlace() const;
 
 	/**
 	 * Only perform a Turn In Place check if the character is looking toward the camera in Third Person,
@@ -84,7 +84,7 @@ public:
 	 * states of the AnimBP so that the character can only turn while in those states..
 	 */
 	UFUNCTION(BlueprintCallable, Category = "ALS|Grounded")
-	bool CanTurnInPlace() const;
+	virtual bool CanTurnInPlace() const;
 
 	/**
 	 * Only perform a Dynamic Transition check if the "Enable Transition" curve is fully weighted.
@@ -92,7 +92,7 @@ public:
 	 * that the character can only transition while in those states.
 	 */
 	UFUNCTION(BlueprintCallable, Category = "ALS|Grounded")
-	bool CanDynamicTransition() const;
+	virtual bool CanDynamicTransition() const;
 
 	/** Return mutable reference of character information to edit them easily inside character class */
 	FALSAnimCharacterInformation& GetCharacterInformationMutable()

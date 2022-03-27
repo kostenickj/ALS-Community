@@ -548,6 +548,9 @@ protected:
 	EALSRotationMode RotationMode = EALSRotationMode::LookingDirection;
 
 	UPROPERTY(BlueprintReadOnly, Category = "ALS|State Values")
+	EALSRotationMode PrevRotationMode = EALSRotationMode::LookingDirection;
+
+	UPROPERTY(BlueprintReadOnly, Category = "ALS|State Values")
 	EALSGait Gait = EALSGait::Walking;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "ALS|State Values")

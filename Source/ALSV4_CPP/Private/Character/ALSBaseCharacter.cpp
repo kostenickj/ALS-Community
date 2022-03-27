@@ -375,9 +375,9 @@ void AALSBaseCharacter::SetRotationMode(const EALSRotationMode NewRotationMode, 
 {
 	if (bForce || RotationMode != NewRotationMode)
 	{
-		const EALSRotationMode Prev = RotationMode;
+		PrevRotationMode = RotationMode;
 		RotationMode = NewRotationMode;
-		OnRotationModeChanged(Prev);
+		OnRotationModeChanged(PrevRotationMode);
 
 		if (GetLocalRole() == ROLE_AutonomousProxy)
 		{
