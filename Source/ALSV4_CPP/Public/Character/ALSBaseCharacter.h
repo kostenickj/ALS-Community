@@ -524,6 +524,9 @@ protected:
 
 	UPROPERTY(BlueprintReadOnly, Category = "ALS|State Values", ReplicatedUsing = OnRep_RotationMode)
 	EALSRotationMode RotationMode = EALSRotationMode::LookingDirection;
+	
+	UPROPERTY(BlueprintReadOnly, Category = "ALS|State Values")
+	EALSRotationMode PrevRotationMode = EALSRotationMode::LookingDirection;
 
 	UPROPERTY(BlueprintReadOnly, Category = "ALS|State Values")
 	EALSGait Gait = EALSGait::Walking;
