@@ -72,7 +72,7 @@ public:
 
 	/** Enable Movement Animations if IsMoving and HasMovementInput, or if the Speed is greater than 150. */
 	UFUNCTION(BlueprintCallable, Category = "ALS|Grounded")
-	virtual bool ShouldMoveCheck() const;
+	bool ShouldMoveCheck() const;
 
 	/** Only perform a Rotate In Place Check if the character is Aiming or in First Person. */
 	UFUNCTION(BlueprintCallable, Category = "ALS|Grounded")
